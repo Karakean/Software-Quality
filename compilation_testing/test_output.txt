@@ -1,0 +1,492 @@
+kobas@DESKTOP-HV826TQ:/mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main$ make test
+# This runs all of the tests on all supported Python versions.
+tox
+GLOB sdist-make: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/setup.py
+py37-default create: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/py37-default
+py37-default installdeps: -rrequirements-dev.txt
+py37-default inst: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip
+py37-default installed: attrs==22.2.0,blinker==1.5,brotlipy==0.7.0,certifi==2022.12.7,cffi==1.15.1,charset-normalizer==3.1.0,click==7.1.2,coverage==7.2.2,cryptography==40.0.1,decorator==5.1.1,Flask==1.1.4,httpbin==0.7.0,idna==3.4,importlib-metadata==6.1.0,iniconfig==2.0.0,itsdangerous==1.1.0,Jinja2==2.11.3,MarkupSafe==2.0.1,packaging==23.0,pluggy==1.0.0,py==1.11.0,pycparser==2.21,PySocks==1.7.1,pytest==6.2.5,pytest-cov==4.0.0,pytest-httpbin==1.0.0,pytest-mock==2.0.0,raven==6.10.0,requests @ file:///mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip,six==1.16.0,toml==0.10.2,tomli==2.0.1,trustme==0.9.0,typing_extensions==4.5.0,urllib3==1.26.15,Werkzeug==1.0.1,zipp==3.15.0
+py37-default runtests: PYTHONHASHSEED='1441683036'
+py37-default runtests: commands[0] | pytest tests
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.7.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main, configfile: pyproject.toml
+plugins: cov-4.0.0, httpbin-1.0.0, mock-2.0.0
+collected 594 items
+
+tests/test_help.py ...                                                                                                                                [  0%]
+tests/test_hooks.py ...                                                                                                                               [  1%]
+tests/test_lowlevel.py ....................                                                                                                           [  4%]
+tests/test_packages.py ...                                                                                                                            [  4%]
+tests/test_requests.py ...............................127.0.0.1 - - [30/Mar/2023 19:29:18] "GET /get HTTP/1.1" 200 172
+......127.0.0.1 - - [30/Mar/2023 19:29:18] "GET /get HTTP/1.1" 200 222
+..127.0.0.1 - - [30/Mar/2023 19:29:18] "GET /get HTTP/1.1" 200 222
+..127.0.0.1 - - [30/Mar/2023 19:29:18] "GET /get HTTP/1.1" 200 222
+..............127.0.0.1 - - [30/Mar/2023 19:29:18] "GET /cookies HTTP/1.1" 200 26
+.127.0.0.1 - - [30/Mar/2023 19:29:18] "GET /cookies HTTP/1.1" 200 26
+...127.0.0.1 - - [30/Mar/2023 19:29:18] "GET /get HTTP/1.1" 200 222
+.........................127.0.0.1 - - [30/Mar/2023 19:29:18] "GET /digest-auth/auth/user/pass/SHA-512/never HTTP/1.1" 200 37
+.127.0.0.1 - - [30/Mar/2023 19:29:18] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+.....127.0.0.1 - - [30/Mar/2023 19:29:18] "POST /post HTTP/1.1" 200 323
+.127.0.0.1 - - [30/Mar/2023 19:29:18] "POST /post HTTP/1.1" 200 388
+...........................pytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1076)
+attempting to ignore so the rest of the tests can run
+........ [ 26%]
+.......................................127.0.0.1 - - [30/Mar/2023 19:29:19] "GET /get HTTP/1.1" 200 172
+.......127.0.0.1 - - [30/Mar/2023 19:29:19] "GET /get HTTP/1.1" 200 222
+....127.0.0.1 - - [30/Mar/2023 19:29:19] "GET /get HTTP/1.1" 200 274
+...................127.0.0.1 - - [30/Mar/2023 19:29:20] "GET /get HTTP/1.1" 200 244
+........127.0.0.1 - - [30/Mar/2023 19:29:20] "GET /get HTTP/1.1" 200 259
+.......................127.0.0.1 - - [30/Mar/2023 19:29:20] "GET /stream/4 HTTP/1.1" 200 1008
+.127.0.0.1 - - [30/Mar/2023 19:29:20] "GET /stream/4 HTTP/1.1" 200 1008
+.x.............................................. [ 51%]
+............................................                                                                                                          [ 58%]
+tests/test_structures.py ....................                                                                                                         [ 61%]
+tests/test_testserver.py ......s....                                                                                                                  [ 63%]
+tests/test_utils.py ..s.............................................................................................................................. [ 85%]
+......................................................................sssssssssss.....                                                                [100%]
+
+=================================================== 580 passed, 13 skipped, 1 xfailed in 66.98s (0:01:06) ===================================================
+py37- use_chardet_on_py3 create: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/py37- use_chardet_on_py3
+py37- use_chardet_on_py3 installdeps: -rrequirements-dev.txt
+py37- use_chardet_on_py3 inst: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip
+py37- use_chardet_on_py3 installed: attrs==22.2.0,blinker==1.5,brotlipy==0.7.0,certifi==2022.12.7,cffi==1.15.1,charset-normalizer==3.1.0,click==7.1.2,coverage==7.2.2,cryptography==40.0.1,decorator==5.1.1,Flask==1.1.4,httpbin==0.7.0,idna==3.4,importlib-metadata==6.1.0,iniconfig==2.0.0,itsdangerous==1.1.0,Jinja2==2.11.3,MarkupSafe==2.0.1,packaging==23.0,pluggy==1.0.0,py==1.11.0,pycparser==2.21,PySocks==1.7.1,pytest==6.2.5,pytest-cov==4.0.0,pytest-httpbin==1.0.0,pytest-mock==2.0.0,raven==6.10.0,requests @ file:///mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip,six==1.16.0,toml==0.10.2,tomli==2.0.1,trustme==0.9.0,typing_extensions==4.5.0,urllib3==1.26.15,Werkzeug==1.0.1,zipp==3.15.0
+py37- use_chardet_on_py3 runtests: PYTHONHASHSEED='1441683036'
+py37- use_chardet_on_py3 runtests: commands[0] | pytest tests
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.7.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main, configfile: pyproject.toml
+plugins: cov-4.0.0, httpbin-1.0.0, mock-2.0.0
+collected 594 items
+
+tests/test_help.py ...                                                                                                                                [  0%]
+tests/test_hooks.py ...                                                                                                                               [  1%]
+tests/test_lowlevel.py ....................                                                                                                           [  4%]
+tests/test_packages.py ...                                                                                                                            [  4%]
+tests/test_requests.py ...........................127.0.0.1 - - [30/Mar/2023 19:31:10] "GET /get HTTP/1.1" 200 172
+..127.0.0.1 - - [30/Mar/2023 19:31:10] "GET /get HTTP/1.1" 200 172
+....127.0.0.1 - - [30/Mar/2023 19:31:10] "POST /post HTTP/1.1" 200 291
+....127.0.0.1 - - [30/Mar/2023 19:31:10] "GET /get HTTP/1.1" 200 222
+....127.0.0.1 - - [30/Mar/2023 19:31:10] "GET /get HTTP/1.1" 200 222
+...127.0.0.1 - - [30/Mar/2023 19:31:10] "GET /get HTTP/1.1" 200 222
+...............127.0.0.1 - - [30/Mar/2023 19:31:11] "GET /get HTTP/1.1" 200 222
+....127.0.0.1 - - [30/Mar/2023 19:31:11] "GET /user-agent HTTP/1.1" 200 55
+...................127.0.0.1 - - [30/Mar/2023 19:31:11] "GET /get HTTP/1.1" 200 257
+..127.0.0.1 - - [30/Mar/2023 19:31:11] "GET /digest-auth/auth/user/pass/SHA-512/never HTTP/1.1" 200 37
+...127.0.0.1 - - [30/Mar/2023 19:31:11] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+......127.0.0.1 - - [30/Mar/2023 19:31:11] "POST /post HTTP/1.1" 200 323
+.127.0.0.1 - - [30/Mar/2023 19:31:11] "POST /post HTTP/1.1" 200 351
+........127.0.0.1 - - [30/Mar/2023 19:31:11] "GET /get?foo=foo HTTP/1.1" 200 241
+................pytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1076)
+attempting to ignore so the rest of the tests can run
+.127.0.0.1 - - [30/Mar/2023 19:31:12] "GET /get?test=foo&test=baz HTTP/1.1" 200 260
+....... [ 26%]
+..............................................127.0.0.1 - - [30/Mar/2023 19:31:12] "GET /get HTTP/1.1" 200 222
+.127.0.0.1 - - [30/Mar/2023 19:31:12] "GET /get?foo=bar&FOO=bar HTTP/1.1" 200 261
+..................................................127.0.0.1 - - [30/Mar/2023 19:31:13] "POST /post HTTP/1.1" 200 343
+...127.0.0.1 - - [30/Mar/2023 19:31:13] "GET /stream/4 HTTP/1.1" 200 1008
+.127.0.0.1 - - [30/Mar/2023 19:31:13] "GET /stream/4 HTTP/1.1" 200 1008
+.x.............................................. [ 51%]
+.............127.0.0.1 - - [30/Mar/2023 19:31:43] "GET /status/500 HTTP/1.1" 500 0
+...............................                                                                                                          [ 58%]
+tests/test_structures.py ....................                                                                                                         [ 61%]
+tests/test_testserver.py ......s....                                                                                                                  [ 63%]
+tests/test_utils.py ..s.............................................................................................................................. [ 85%]
+......................................................................sssssssssss.....                                                                [100%]
+
+=================================================== 580 passed, 13 skipped, 1 xfailed in 71.86s (0:01:11) ===================================================
+py38-default create: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/py38-default
+py38-default installdeps: -rrequirements-dev.txt
+py38-default inst: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip
+py38-default installed: attrs==22.2.0,blinker==1.5,brotlipy==0.7.0,certifi==2022.12.7,cffi==1.15.1,charset-normalizer==3.1.0,click==7.1.2,coverage==7.2.2,cryptography==40.0.1,decorator==5.1.1,Flask==1.1.4,httpbin==0.7.0,idna==3.4,importlib-metadata==6.1.0,iniconfig==2.0.0,itsdangerous==1.1.0,Jinja2==2.11.3,MarkupSafe==2.0.1,packaging==23.0,pluggy==1.0.0,py==1.11.0,pycparser==2.21,PySocks==1.7.1,pytest==6.2.5,pytest-cov==4.0.0,pytest-httpbin==1.0.0,pytest-mock==2.0.0,raven==6.10.0,requests @ file:///mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip,six==1.16.0,toml==0.10.2,tomli==2.0.1,trustme==0.9.0,typing_extensions==4.5.0,urllib3==1.26.15,Werkzeug==1.0.1,zipp==3.15.0
+py38-default runtests: PYTHONHASHSEED='1441683036'
+py38-default runtests: commands[0] | pytest tests
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.7.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main, configfile: pyproject.toml
+plugins: cov-4.0.0, httpbin-1.0.0, mock-2.0.0
+collected 594 items
+
+tests/test_help.py ...                                                                                                                                [  0%]
+tests/test_hooks.py ...                                                                                                                               [  1%]
+tests/test_lowlevel.py ....................                                                                                                           [  4%]
+tests/test_packages.py ...                                                                                                                            [  4%]
+tests/test_requests.py ...........................127.0.0.1 - - [30/Mar/2023 19:33:07] "GET /get HTTP/1.1" 200 172
+....127.0.0.1 - - [30/Mar/2023 19:33:07] "GET /get HTTP/1.1" 200 172
+.127.0.0.1 - - [30/Mar/2023 19:33:07] "GET /get HTTP/1.1" 200 222
+....127.0.0.1 - - [30/Mar/2023 19:33:08] "GET /relative-redirect/45 HTTP/1.1" 302 0
+.127.0.0.1 - - [30/Mar/2023 19:33:08] "GET /get HTTP/1.1" 200 222
+..127.0.0.1 - - [30/Mar/2023 19:33:08] "GET /get HTTP/1.1" 200 222
+.............127.0.0.1 - - [30/Mar/2023 19:33:08] "GET /get HTTP/1.1" 200 241
+.127.0.0.1 - - [30/Mar/2023 19:33:08] "GET /cookies HTTP/1.1" 200 26
+..........127.0.0.1 - - [30/Mar/2023 19:33:08] "GET /user-agent HTTP/1.1" 200 55
+.....................127.0.0.1 - - [30/Mar/2023 19:33:08] "GET /digest-auth/auth/user/pass/SHA-512/never HTTP/1.1" 200 37
+.........127.0.0.1 - - [30/Mar/2023 19:33:08] "POST /post HTTP/1.1" 200 323
+.........................pytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1076)
+attempting to ignore so the rest of the tests can run
+.127.0.0.1 - - [30/Mar/2023 19:33:09] "GET /get?test=foo&test=baz HTTP/1.1" 200 260
+....... [ 26%]
+.........127.0.0.1 - - [30/Mar/2023 19:33:09] "GET /headers HTTP/1.1" 200 195
+.........................127.0.0.1 - - [30/Mar/2023 19:33:09] "GET /get HTTP/1.1" 200 172
+................127.0.0.1 - - [30/Mar/2023 19:33:09] "GET /get HTTP/1.1" 200 274
+...............................................127.0.0.1 - - [30/Mar/2023 19:33:10] "POST /post HTTP/1.1" 200 343
+...127.0.0.1 - - [30/Mar/2023 19:33:10] "GET /stream/4 HTTP/1.1" 200 1008
+.127.0.0.1 - - [30/Mar/2023 19:33:10] "GET /stream/4 HTTP/1.1" 200 1008
+.x........127.0.0.1 - - [30/Mar/2023 19:33:10] "GET /html HTTP/1.1" 200 3741
+.............................127.0.0.1 - - [30/Mar/2023 19:33:20] "GET /get HTTP/1.1" 200 222
+......... [ 51%]
+...............................127.0.0.1 - - [30/Mar/2023 19:33:40] "GET /redirect-to?url=http%3A%2F%2Flocalhost%3A-1 HTTP/1.1" 302 0
+.............                                                                                                          [ 58%]
+tests/test_structures.py ....................                                                                                                         [ 61%]
+tests/test_testserver.py ......s....                                                                                                                  [ 63%]
+tests/test_utils.py ..s.............................................................................................................................. [ 85%]
+......................................................................sssssssssss.....                                                                [100%]
+
+=================================================== 580 passed, 13 skipped, 1 xfailed in 71.31s (0:01:11) ===================================================
+py38- use_chardet_on_py3 create: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/py38- use_chardet_on_py3
+py38- use_chardet_on_py3 installdeps: -rrequirements-dev.txt
+py38- use_chardet_on_py3 inst: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip
+py38- use_chardet_on_py3 installed: attrs==22.2.0,blinker==1.5,brotlipy==0.7.0,certifi==2022.12.7,cffi==1.15.1,charset-normalizer==3.1.0,click==7.1.2,coverage==7.2.2,cryptography==40.0.1,decorator==5.1.1,Flask==1.1.4,httpbin==0.7.0,idna==3.4,importlib-metadata==6.1.0,iniconfig==2.0.0,itsdangerous==1.1.0,Jinja2==2.11.3,MarkupSafe==2.0.1,packaging==23.0,pluggy==1.0.0,py==1.11.0,pycparser==2.21,PySocks==1.7.1,pytest==6.2.5,pytest-cov==4.0.0,pytest-httpbin==1.0.0,pytest-mock==2.0.0,raven==6.10.0,requests @ file:///mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip,six==1.16.0,toml==0.10.2,tomli==2.0.1,trustme==0.9.0,typing_extensions==4.5.0,urllib3==1.26.15,Werkzeug==1.0.1,zipp==3.15.0
+py38- use_chardet_on_py3 runtests: PYTHONHASHSEED='1441683036'
+py38- use_chardet_on_py3 runtests: commands[0] | pytest tests
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.7.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main, configfile: pyproject.toml
+plugins: cov-4.0.0, httpbin-1.0.0, mock-2.0.0
+collected 594 items
+
+tests/test_help.py ...                                                                                                                                [  0%]
+tests/test_hooks.py ...                                                                                                                               [  1%]
+tests/test_lowlevel.py ....................                                                                                                           [  4%]
+tests/test_packages.py ...                                                                                                                            [  4%]
+tests/test_requests.py ...........................127.0.0.1 - - [30/Mar/2023 19:35:04] "GET /get HTTP/1.1" 200 172
+...127.0.0.1 - - [30/Mar/2023 19:35:04] "GET /get HTTP/1.1" 200 172
+.............127.0.0.1 - - [30/Mar/2023 19:35:04] "GET /get HTTP/1.1" 200 222
+......127.0.0.1 - - [30/Mar/2023 19:35:04] "GET /get HTTP/1.1" 200 241
+.127.0.0.1 - - [30/Mar/2023 19:35:04] "GET /response-headers?Set-Cookie=foo%3Ddeleted%3B+expires%3DThu%2C+01-Jan-1970+00%3A00%3A01+GMT HTTP/1.1" 200 125
+...127.0.0.1 - - [30/Mar/2023 19:35:04] "GET /cookies HTTP/1.1" 200 26
+.127.0.0.1 - - [30/Mar/2023 19:35:04] "GET /cookies HTTP/1.1" 200 26
+.....127.0.0.1 - - [30/Mar/2023 19:35:04] "GET /get HTTP/1.1" 200 222
+.....127.0.0.1 - - [30/Mar/2023 19:35:04] "HEAD /get HTTP/1.1" 200 0
+..127.0.0.1 - - [30/Mar/2023 19:35:04] "GET /basic-auth/user/pass HTTP/1.1" 200 37
+....................127.0.0.1 - - [30/Mar/2023 19:35:05] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+...127.0.0.1 - - [30/Mar/2023 19:35:05] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+.........127.0.0.1 - - [30/Mar/2023 19:35:05] "GET /gzip HTTP/1.1" 200 183
+.127.0.0.1 - - [30/Mar/2023 19:35:05] "GET /get?foo=f%C3%B8%C3%B8 HTTP/1.1" 200 261
+.127.0.0.1 - - [30/Mar/2023 19:35:05] "GET /get?f%C3%B8%C3%B8=f%C3%B8%C3%B8 HTTP/1.1" 200 281
+..................pytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1076)
+attempting to ignore so the rest of the tests can run
+........ [ 26%]
+....................................127.0.0.1 - - [30/Mar/2023 19:35:06] "GET /get HTTP/1.1" 200 172
+..........127.0.0.1 - - [30/Mar/2023 19:35:06] "GET /get HTTP/1.1" 200 222
+....127.0.0.1 - - [30/Mar/2023 19:35:06] "GET /get HTTP/1.1" 200 274
+....................................127.0.0.1 - - [30/Mar/2023 19:35:06] "GET /get HTTP/1.1" 200 222
+.......127.0.0.1 - - [30/Mar/2023 19:35:06] "GET /get HTTP/1.1" 200 222
+...127.0.0.1 - - [30/Mar/2023 19:35:06] "GET /get HTTP/1.1" 200 222
+....127.0.0.1 - - [30/Mar/2023 19:35:06] "GET /stream/4 HTTP/1.1" 200 1008
+..x......................................127.0.0.1 - - [30/Mar/2023 19:35:17] "GET /get HTTP/1.1" 200 222
+........ [ 51%]
+............................................                                                                                                          [ 58%]
+tests/test_structures.py ....................                                                                                                         [ 61%]
+tests/test_testserver.py ......s....                                                                                                                  [ 63%]
+tests/test_utils.py ..s.............................................................................................................................. [ 85%]
+......................................................................sssssssssss.....                                                                [100%]
+
+=================================================== 580 passed, 13 skipped, 1 xfailed in 71.52s (0:01:11) ===================================================
+py39-default create: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/py39-default
+py39-default installdeps: -rrequirements-dev.txt
+py39-default inst: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip
+py39-default installed: attrs==22.2.0,blinker==1.5,brotlipy==0.7.0,certifi==2022.12.7,cffi==1.15.1,charset-normalizer==3.1.0,click==7.1.2,coverage==7.2.2,cryptography==40.0.1,decorator==5.1.1,Flask==1.1.4,httpbin==0.7.0,idna==3.4,importlib-metadata==6.1.0,iniconfig==2.0.0,itsdangerous==1.1.0,Jinja2==2.11.3,MarkupSafe==2.0.1,packaging==23.0,pluggy==1.0.0,py==1.11.0,pycparser==2.21,PySocks==1.7.1,pytest==6.2.5,pytest-cov==4.0.0,pytest-httpbin==1.0.0,pytest-mock==2.0.0,raven==6.10.0,requests @ file:///mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip,six==1.16.0,toml==0.10.2,tomli==2.0.1,trustme==0.9.0,typing_extensions==4.5.0,urllib3==1.26.15,Werkzeug==1.0.1,zipp==3.15.0
+py39-default runtests: PYTHONHASHSEED='1441683036'
+py39-default runtests: commands[0] | pytest tests
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.7.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main, configfile: pyproject.toml
+plugins: cov-4.0.0, httpbin-1.0.0, mock-2.0.0
+collected 594 items
+
+tests/test_help.py ...                                                                                                                                [  0%]
+tests/test_hooks.py ...                                                                                                                               [  1%]
+tests/test_lowlevel.py ....................                                                                                                           [  4%]
+tests/test_packages.py ...                                                                                                                            [  4%]
+tests/test_requests.py ............................127.0.0.1 - - [30/Mar/2023 19:37:05] "GET /get HTTP/1.1" 200 172
+.....127.0.0.1 - - [30/Mar/2023 19:37:05] "POST /post HTTP/1.1" 200 291
+...127.0.0.1 - - [30/Mar/2023 19:37:05] "GET /relative-redirect/45 HTTP/1.1" 302 0
+.127.0.0.1 - - [30/Mar/2023 19:37:05] "GET /get HTTP/1.1" 200 222
+....127.0.0.1 - - [30/Mar/2023 19:37:05] "GET /get HTTP/1.1" 200 222
+..127.0.0.1 - - [30/Mar/2023 19:37:05] "GET /get HTTP/1.1" 200 222
+..........127.0.0.1 - - [30/Mar/2023 19:37:05] "GET /cookies HTTP/1.1" 200 26
+..127.0.0.1 - - [30/Mar/2023 19:37:05] "GET /cookies HTTP/1.1" 200 26
+...............................127.0.0.1 - - [30/Mar/2023 19:37:06] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+........127.0.0.1 - - [30/Mar/2023 19:37:06] "POST /post HTTP/1.1" 200 351
+.......127.0.0.1 - - [30/Mar/2023 19:37:06] "GET /get?f%C3%B8%C3%B8=f%C3%B8%C3%B8 HTTP/1.1" 200 281
+..127.0.0.1 - - [30/Mar/2023 19:37:06] "GET /%C3%B8?foo=foo HTTP/1.1" 404 232
+...............pytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1076)
+attempting to ignore so the rest of the tests can run
+........ [ 26%]
+.........127.0.0.1 - - [30/Mar/2023 19:37:07] "GET /headers HTTP/1.1" 200 195
+..............................127.0.0.1 - - [30/Mar/2023 19:37:07] "GET /get HTTP/1.1" 200 172
+...........127.0.0.1 - - [30/Mar/2023 19:37:07] "GET /get HTTP/1.1" 200 274
+...................127.0.0.1 - - [30/Mar/2023 19:37:07] "GET /get HTTP/1.1" 200 244
+.......127.0.0.1 - - [30/Mar/2023 19:37:07] "GET /get HTTP/1.1" 200 222
+..........127.0.0.1 - - [30/Mar/2023 19:37:07] "GET /get HTTP/1.1" 200 222
+..............127.0.0.1 - - [30/Mar/2023 19:37:07] "GET /stream/4 HTTP/1.1" 200 1008
+.127.0.0.1 - - [30/Mar/2023 19:37:07] "GET /stream/4 HTTP/1.1" 200 1008
+.x........127.0.0.1 - - [30/Mar/2023 19:37:07] "GET /html HTTP/1.1" 200 3741
+...................................... [ 51%]
+............................................                                                                                                          [ 58%]
+tests/test_structures.py ....................                                                                                                         [ 61%]
+tests/test_testserver.py ......s....                                                                                                                  [ 63%]
+tests/test_utils.py ..s.............................................................................................................................. [ 85%]
+......................................................................sssssssssss.....                                                                [100%]
+
+=================================================== 580 passed, 13 skipped, 1 xfailed in 66.54s (0:01:06) ===================================================
+py39- use_chardet_on_py3 create: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/py39- use_chardet_on_py3
+py39- use_chardet_on_py3 installdeps: -rrequirements-dev.txt
+py39- use_chardet_on_py3 inst: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip
+py39- use_chardet_on_py3 installed: attrs==22.2.0,blinker==1.5,brotlipy==0.7.0,certifi==2022.12.7,cffi==1.15.1,charset-normalizer==3.1.0,click==7.1.2,coverage==7.2.2,cryptography==40.0.1,decorator==5.1.1,Flask==1.1.4,httpbin==0.7.0,idna==3.4,importlib-metadata==6.1.0,iniconfig==2.0.0,itsdangerous==1.1.0,Jinja2==2.11.3,MarkupSafe==2.0.1,packaging==23.0,pluggy==1.0.0,py==1.11.0,pycparser==2.21,PySocks==1.7.1,pytest==6.2.5,pytest-cov==4.0.0,pytest-httpbin==1.0.0,pytest-mock==2.0.0,raven==6.10.0,requests @ file:///mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip,six==1.16.0,toml==0.10.2,tomli==2.0.1,trustme==0.9.0,typing_extensions==4.5.0,urllib3==1.26.15,Werkzeug==1.0.1,zipp==3.15.0
+py39- use_chardet_on_py3 runtests: PYTHONHASHSEED='1441683036'
+py39- use_chardet_on_py3 runtests: commands[0] | pytest tests
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.7.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main, configfile: pyproject.toml
+plugins: cov-4.0.0, httpbin-1.0.0, mock-2.0.0
+collected 594 items
+
+tests/test_help.py ...                                                                                                                                [  0%]
+tests/test_hooks.py ...                                                                                                                               [  1%]
+tests/test_lowlevel.py ....................                                                                                                           [  4%]
+tests/test_packages.py ...                                                                                                                            [  4%]
+tests/test_requests.py ............................127.0.0.1 - - [30/Mar/2023 19:38:59] "GET /get HTTP/1.1" 200 172
+..................127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /user-agent HTTP/1.1" 200 29
+...127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /get HTTP/1.1" 200 241
+.....127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /cookies HTTP/1.1" 200 26
+.127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /cookies HTTP/1.1" 200 26
+...127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /get HTTP/1.1" 200 222
+......127.0.0.1 - - [30/Mar/2023 19:39:00] "HEAD /get HTTP/1.1" 200 0
+..................127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /get HTTP/1.1" 200 257
+...127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+....127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+....127.0.0.1 - - [30/Mar/2023 19:39:00] "POST /post HTTP/1.1" 200 323
+.......127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /get?f%C3%B8%C3%B8=f%C3%B8%C3%B8 HTTP/1.1" 200 281
+.127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /get?f%C3%B8%C3%B8=f%C3%B8%C3%B8 HTTP/1.1" 200 281
+.127.0.0.1 - - [30/Mar/2023 19:39:00] "GET /get?foo=foo HTTP/1.1" 200 241
+..127.0.0.1 - - [30/Mar/2023 19:39:00] "PUT /put HTTP/1.1" 200 369
+..............pytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1076)
+attempting to ignore so the rest of the tests can run
+........ [ 26%]
+........127.0.0.1 - - [30/Mar/2023 19:39:01] "GET / HTTP/1.1" 200 12144
+.127.0.0.1 - - [30/Mar/2023 19:39:01] "GET /headers HTTP/1.1" 200 195
+..127.0.0.1 - - [30/Mar/2023 19:39:01] "GET /cookies/set?cookie=value HTTP/1.1" 302 223
+......................127.0.0.1 - - [30/Mar/2023 19:39:01] "GET /get HTTP/1.1" 200 222
+.127.0.0.1 - - [30/Mar/2023 19:39:01] "GET /get HTTP/1.1" 200 172
+..127.0.0.1 - - [30/Mar/2023 19:39:01] "GET /get HTTP/1.1" 200 172
+.....127.0.0.1 - - [30/Mar/2023 19:39:01] "GET /html HTTP/1.1" 200 3741
+.....127.0.0.1 - - [30/Mar/2023 19:39:01] "GET /get HTTP/1.1" 200 222
+....127.0.0.1 - - [30/Mar/2023 19:39:01] "GET /get HTTP/1.1" 200 274
+...................127.0.0.1 - - [30/Mar/2023 19:39:02] "GET /get HTTP/1.1" 200 244
+........127.0.0.1 - - [30/Mar/2023 19:39:02] "GET /get HTTP/1.1" 200 259
+....................127.0.0.1 - - [30/Mar/2023 19:39:02] "POST /post HTTP/1.1" 200 343
+....127.0.0.1 - - [30/Mar/2023 19:39:02] "GET /stream/4 HTTP/1.1" 200 1008
+.x........127.0.0.1 - - [30/Mar/2023 19:39:02] "GET /html HTTP/1.1" 200 3741
+...................................... [ 51%]
+............................................                                                                                                          [ 58%]
+tests/test_structures.py ....................                                                                                                         [ 61%]
+tests/test_testserver.py ......s....                                                                                                                  [ 63%]
+tests/test_utils.py ..s.............................................................................................................................. [ 85%]
+......................................................................sssssssssss.....                                                                [100%]
+
+=================================================== 580 passed, 13 skipped, 1 xfailed in 71.60s (0:01:11) ===================================================
+py310-default create: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/py310-default
+py310-default installdeps: -rrequirements-dev.txt
+py310-default inst: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip
+py310-default installed: attrs==22.2.0,blinker==1.5,brotlipy==0.7.0,certifi==2022.12.7,cffi==1.15.1,charset-normalizer==3.1.0,click==7.1.2,coverage==7.2.2,cryptography==40.0.1,decorator==5.1.1,Flask==1.1.4,httpbin==0.7.0,idna==3.4,importlib-metadata==6.1.0,iniconfig==2.0.0,itsdangerous==1.1.0,Jinja2==2.11.3,MarkupSafe==2.0.1,packaging==23.0,pluggy==1.0.0,py==1.11.0,pycparser==2.21,PySocks==1.7.1,pytest==6.2.5,pytest-cov==4.0.0,pytest-httpbin==1.0.0,pytest-mock==2.0.0,raven==6.10.0,requests @ file:///mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip,six==1.16.0,toml==0.10.2,tomli==2.0.1,trustme==0.9.0,typing_extensions==4.5.0,urllib3==1.26.15,Werkzeug==1.0.1,zipp==3.15.0
+py310-default runtests: PYTHONHASHSEED='1441683036'
+py310-default runtests: commands[0] | pytest tests
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.7.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main, configfile: pyproject.toml
+plugins: cov-4.0.0, httpbin-1.0.0, mock-2.0.0
+collected 594 items
+
+tests/test_help.py ...                                                                                                                                [  0%]
+tests/test_hooks.py ...                                                                                                                               [  1%]
+tests/test_lowlevel.py ....................                                                                                                           [  4%]
+tests/test_packages.py ...                                                                                                                            [  4%]
+tests/test_requests.py ............................................127.0.0.1 - - [30/Mar/2023 19:41:00] "GET /get HTTP/1.1" 200 222
+..127.0.0.1 - - [30/Mar/2023 19:41:00] "GET /user-agent HTTP/1.1" 200 29
+...127.0.0.1 - - [30/Mar/2023 19:41:00] "GET /get HTTP/1.1" 200 241
+.........127.0.0.1 - - [30/Mar/2023 19:41:00] "GET /get HTTP/1.1" 200 222
+.............................127.0.0.1 - - [30/Mar/2023 19:41:00] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+..127.0.0.1 - - [30/Mar/2023 19:41:00] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+...127.0.0.1 - - [30/Mar/2023 19:41:00] "POST /post HTTP/1.1" 200 289
+........127.0.0.1 - - [30/Mar/2023 19:41:00] "GET /get?f%C3%B8%C3%B8=f%C3%B8%C3%B8 HTTP/1.1" 200 281
+.127.0.0.1 - - [30/Mar/2023 19:41:00] "GET /get?f%C3%B8%C3%B8=f%C3%B8%C3%B8 HTTP/1.1" 200 281
+.................pytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1076)
+attempting to ignore so the rest of the tests can run
+........ [ 26%]
+......................127.0.0.1 - - [30/Mar/2023 19:41:01] "GET /get HTTP/1.1" 200 222
+.............127.0.0.1 - - [30/Mar/2023 19:41:01] "POST /post HTTP/1.1" 200 103690
+..............................................................127.0.0.1 - - [30/Mar/2023 19:41:02] "POST /post HTTP/1.1" 200 343
+...127.0.0.1 - - [30/Mar/2023 19:41:02] "GET /stream/4 HTTP/1.1" 200 1008
+.127.0.0.1 - - [30/Mar/2023 19:41:02] "GET /stream/4 HTTP/1.1" 200 1008
+.x.............................................. [ 51%]
+............................................                                                                                                          [ 58%]
+tests/test_structures.py ....................                                                                                                         [ 61%]
+tests/test_testserver.py ......s....                                                                                                                  [ 63%]
+tests/test_utils.py ..s.............................................................................................................................. [ 85%]
+......................................................................sssssssssss.....                                                                [100%]
+
+=================================================== 580 passed, 13 skipped, 1 xfailed in 71.61s (0:01:11) ===================================================
+py310- use_chardet_on_py3 create: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/py310- use_chardet_on_py3
+py310- use_chardet_on_py3 installdeps: -rrequirements-dev.txt
+py310- use_chardet_on_py3 inst: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip
+py310- use_chardet_on_py3 installed: attrs==22.2.0,blinker==1.5,brotlipy==0.7.0,certifi==2022.12.7,cffi==1.15.1,charset-normalizer==3.1.0,click==7.1.2,coverage==7.2.2,cryptography==40.0.1,decorator==5.1.1,Flask==1.1.4,httpbin==0.7.0,idna==3.4,importlib-metadata==6.1.0,iniconfig==2.0.0,itsdangerous==1.1.0,Jinja2==2.11.3,MarkupSafe==2.0.1,packaging==23.0,pluggy==1.0.0,py==1.11.0,pycparser==2.21,PySocks==1.7.1,pytest==6.2.5,pytest-cov==4.0.0,pytest-httpbin==1.0.0,pytest-mock==2.0.0,raven==6.10.0,requests @ file:///mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip,six==1.16.0,toml==0.10.2,tomli==2.0.1,trustme==0.9.0,typing_extensions==4.5.0,urllib3==1.26.15,Werkzeug==1.0.1,zipp==3.15.0
+py310- use_chardet_on_py3 runtests: PYTHONHASHSEED='1441683036'
+py310- use_chardet_on_py3 runtests: commands[0] | pytest tests
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.7.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main, configfile: pyproject.toml
+plugins: cov-4.0.0, httpbin-1.0.0, mock-2.0.0
+collected 594 items
+
+tests/test_help.py ...                                                                                                                                [  0%]
+tests/test_hooks.py ...                                                                                                                               [  1%]
+tests/test_lowlevel.py ....................                                                                                                           [  4%]
+tests/test_packages.py ...                                                                                                                            [  4%]
+tests/test_requests.py ..............................127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /get HTTP/1.1" 200 172
+.127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /get HTTP/1.1" 200 172
+.127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /get HTTP/1.1" 200 222
+.127.0.0.1 - - [30/Mar/2023 19:43:01] "POST /post HTTP/1.1" 200 291
+..127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /relative-redirect/20 HTTP/1.1" 302 0
+........127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /get HTTP/1.1" 200 222
+.....127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /cookies HTTP/1.1" 200 26
+.....127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /cookies HTTP/1.1" 200 26
+..127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /cookies HTTP/1.1" 200 26
+.127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /cookies HTTP/1.1" 200 26
+...........................127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /basic-auth/user/pass HTTP/1.1" 401 0
+.127.0.0.1 - - [30/Mar/2023 19:43:01] "GET /digest-auth/auth/user/pass/SHA-512/never HTTP/1.1" 200 37
+.....127.0.0.1 - - [30/Mar/2023 19:43:02] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+.127.0.0.1 - - [30/Mar/2023 19:43:02] "POST /post HTTP/1.1" 200 323
+.........127.0.0.1 - - [30/Mar/2023 19:43:02] "GET /get?foo=f%C3%B8%C3%B8 HTTP/1.1" 200 261
+....127.0.0.1 - - [30/Mar/2023 19:43:02] "GET /%C3%B8?foo=foo HTTP/1.1" 404 232
+...............pytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1076)
+attempting to ignore so the rest of the tests can run
+........ [ 26%]
+......................127.0.0.1 - - [30/Mar/2023 19:43:03] "GET /get HTTP/1.1" 200 222
+...........127.0.0.1 - - [30/Mar/2023 19:43:03] "GET /get HTTP/1.1" 200 222
+........127.0.0.1 - - [30/Mar/2023 19:43:03] "GET /html HTTP/1.1" 200 3741
+.....127.0.0.1 - - [30/Mar/2023 19:43:03] "GET /get HTTP/1.1" 200 222
+....127.0.0.1 - - [30/Mar/2023 19:43:03] "GET /get HTTP/1.1" 200 274
+...........................127.0.0.1 - - [30/Mar/2023 19:43:03] "GET /get HTTP/1.1" 200 259
+................127.0.0.1 - - [30/Mar/2023 19:43:03] "GET /get HTTP/1.1" 200 222
+.......127.0.0.1 - - [30/Mar/2023 19:43:03] "GET /stream/4 HTTP/1.1" 200 1008
+.127.0.0.1 - - [30/Mar/2023 19:43:03] "GET /stream/4 HTTP/1.1" 200 1008
+.x......................................127.0.0.1 - - [30/Mar/2023 19:43:13] "GET /get HTTP/1.1" 200 222
+........ [ 51%]
+...........................................127.0.0.1 - - [30/Mar/2023 19:43:33] "GET /bytes/20 HTTP/1.1" 200 20
+.                                                                                                          [ 58%]
+tests/test_structures.py ....................                                                                                                         [ 61%]
+tests/test_testserver.py ......s....                                                                                                                  [ 63%]
+tests/test_utils.py ..s.............................................................................................................................. [ 85%]
+......................................................................sssssssssss.....                                                                [100%]
+
+=================================================== 580 passed, 13 skipped, 1 xfailed in 71.59s (0:01:11) ===================================================
+py311-default create: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/py311-default
+py311-default installdeps: -rrequirements-dev.txt
+py311-default inst: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip
+py311-default installed: attrs==22.2.0,blinker==1.5,brotlipy==0.7.0,certifi==2022.12.7,cffi==1.15.1,charset-normalizer==3.1.0,click==7.1.2,coverage==7.2.2,cryptography==40.0.1,decorator==5.1.1,Flask==1.1.4,httpbin==0.7.0,idna==3.4,importlib-metadata==6.1.0,iniconfig==2.0.0,itsdangerous==1.1.0,Jinja2==2.11.3,MarkupSafe==2.0.1,packaging==23.0,pluggy==1.0.0,py==1.11.0,pycparser==2.21,PySocks==1.7.1,pytest==6.2.5,pytest-cov==4.0.0,pytest-httpbin==1.0.0,pytest-mock==2.0.0,raven==6.10.0,requests @ file:///mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip,six==1.16.0,toml==0.10.2,tomli==2.0.1,trustme==0.9.0,typing_extensions==4.5.0,urllib3==1.26.15,Werkzeug==1.0.1,zipp==3.15.0
+py311-default runtests: PYTHONHASHSEED='1441683036'
+py311-default runtests: commands[0] | pytest tests
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.7.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main, configfile: pyproject.toml
+plugins: cov-4.0.0, httpbin-1.0.0, mock-2.0.0
+collected 594 items
+
+tests/test_help.py ...                                                                                                                                [  0%]
+tests/test_hooks.py ...                                                                                                                               [  1%]
+tests/test_lowlevel.py ....................                                                                                                           [  4%]
+tests/test_packages.py ...                                                                                                                            [  4%]
+tests/test_requests.py ...............................127.0.0.1 - - [30/Mar/2023 19:45:00] "GET /get HTTP/1.1" 200 172
+.127.0.0.1 - - [30/Mar/2023 19:45:00] "GET /get HTTP/1.1" 200 222
+.....127.0.0.1 - - [30/Mar/2023 19:45:01] "GET /get HTTP/1.1" 200 222
+..127.0.0.1 - - [30/Mar/2023 19:45:01] "GET /get HTTP/1.1" 200 222
+............127.0.0.1 - - [30/Mar/2023 19:45:01] "GET /cookies HTTP/1.1" 200 30
+..127.0.0.1 - - [30/Mar/2023 19:45:01] "GET /cookies HTTP/1.1" 200 26
+.127.0.0.1 - - [30/Mar/2023 19:45:01] "GET /cookies HTTP/1.1" 200 26
+...127.0.0.1 - - [30/Mar/2023 19:45:01] "GET /get HTTP/1.1" 200 205
+................................127.0.0.1 - - [30/Mar/2023 19:45:01] "GET /digest-auth/auth/user/pass/SHA-512 HTTP/1.1" 200 37
+.127.0.0.1 - - [30/Mar/2023 19:45:01] "POST /post HTTP/1.1" 200 323
+..127.0.0.1 - - [30/Mar/2023 19:45:01] "POST /post HTTP/1.1" 200 289
+.127.0.0.1 - - [30/Mar/2023 19:45:01] "POST /post HTTP/1.1" 200 323
+.........................pytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1076)
+attempting to ignore so the rest of the tests can run
+........ [ 26%]
+...........127.0.0.1 - - [30/Mar/2023 19:45:02] "GET /cookies/set?cookie=value HTTP/1.1" 302 223
+.......................127.0.0.1 - - [30/Mar/2023 19:45:02] "GET /get HTTP/1.1" 200 172
+.............127.0.0.1 - - [30/Mar/2023 19:45:02] "GET /get?foo=bar&FOO=bar HTTP/1.1" 200 261
+.......................................127.0.0.1 - - [30/Mar/2023 19:45:03] "GET /get HTTP/1.1" 200 222
+...............127.0.0.1 - - [30/Mar/2023 19:45:03] "GET /stream/4 HTTP/1.1" 200 1008
+.x........127.0.0.1 - - [30/Mar/2023 19:45:03] "GET /html HTTP/1.1" 200 3741
+.....................................127.0.0.1 - - [30/Mar/2023 19:45:33] "GET /get HTTP/1.1" 200 222
+. [ 51%]
+............................................                                                                                                          [ 58%]
+tests/test_structures.py ....................                                                                                                         [ 61%]
+tests/test_testserver.py ......s....                                                                                                                  [ 63%]
+tests/test_utils.py ..s.............................................................................................................................. [ 85%]
+......................................................................sssssssssss.....                                                                [100%]
+
+=================================================== 580 passed, 13 skipped, 1 xfailed in 71.57s (0:01:11) ===================================================
+py311- use_chardet_on_py3 create: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/py311- use_chardet_on_py3
+py311- use_chardet_on_py3 installdeps: -rrequirements-dev.txt
+py311- use_chardet_on_py3 inst: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip
+py311- use_chardet_on_py3 installed: attrs==22.2.0,blinker==1.5,brotlipy==0.7.0,certifi==2022.12.7,cffi==1.15.1,charset-normalizer==3.1.0,click==7.1.2,coverage==7.2.2,cryptography==40.0.1,decorator==5.1.1,Flask==1.1.4,httpbin==0.7.0,idna==3.4,importlib-metadata==6.1.0,iniconfig==2.0.0,itsdangerous==1.1.0,Jinja2==2.11.3,MarkupSafe==2.0.1,packaging==23.0,pluggy==1.0.0,py==1.11.0,pycparser==2.21,PySocks==1.7.1,pytest==6.2.5,pytest-cov==4.0.0,pytest-httpbin==1.0.0,pytest-mock==2.0.0,raven==6.10.0,requests @ file:///mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/.tox/dist/requests-2.28.2.zip,six==1.16.0,toml==0.10.2,tomli==2.0.1,trustme==0.9.0,typing_extensions==4.5.0,urllib3==1.26.15,Werkzeug==1.0.1,zipp==3.15.0
+py311- use_chardet_on_py3 runtests: PYTHONHASHSEED='1441683036'
+py311- use_chardet_on_py3 runtests: commands[0] | pytest tests
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.7.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main, configfile: pyproject.toml
+plugins: cov-4.0.0, httpbin-1.0.0, mock-2.0.0
+collected 594 items
+
+tests/test_help.py ...                                                                                                                                [  0%]
+tests/test_hooks.py ...                                                                                                                               [  1%]
+tests/test_lowlevel.py ....................                                                                                                           [  4%]
+tests/test_packages.py ...                                                                                                                            [  4%]
+tests/test_requests.py ..............................127.0.0.1 - - [30/Mar/2023 19:47:00] "GET /get HTTP/1.1" 200 172
+...........127.0.0.1 - - [30/Mar/2023 19:47:00] "GET /get HTTP/1.1" 200 222
+...127.0.0.1 - - [30/Mar/2023 19:47:00] "GET /get HTTP/1.1" 200 222
+.......127.0.0.1 - - [30/Mar/2023 19:47:00] "GET /cookies HTTP/1.1" 200 30
+..127.0.0.1 - - [30/Mar/2023 19:47:00] "GET /cookies HTTP/1.1" 200 26
+...127.0.0.1 - - [30/Mar/2023 19:47:00] "GET /cookies HTTP/1.1" 200 26
+.......127.0.0.1 - - [30/Mar/2023 19:47:00] "GET /user-agent HTTP/1.1" 200 55
+..127.0.0.1 - - [30/Mar/2023 19:47:00] "PUT /put HTTP/1.1" 200 286
+...........................127.0.0.1 - - [30/Mar/2023 19:47:01] "POST /post HTTP/1.1" 200 289
+..........................pytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1076)
+attempting to ignore so the rest of the tests can run
+........ [ 26%]
+.........................................127.0.0.1 - - [30/Mar/2023 19:47:02] "GET /html HTTP/1.1" 200 3741
+...................................127.0.0.1 - - [30/Mar/2023 19:47:03] "GET /get HTTP/1.1" 200 222
+....................127.0.0.1 - - [30/Mar/2023 19:47:03] "GET /get HTTP/1.1" 200 222
+....127.0.0.1 - - [30/Mar/2023 19:47:03] "GET /stream/4 HTTP/1.1" 200 1008
+..x.............................................. [ 51%]
+............................................                                                                                                          [ 58%]
+tests/test_structures.py ....................                                                                                                         [ 61%]
+tests/test_testserver.py ......s....                                                                                                                  [ 63%]
+tests/test_utils.py ..s.............................................................................................................................. [ 85%]
+......................................................................sssssssssss.....                                                                [100%]
+
+=================================================== 580 passed, 13 skipped, 1 xfailed in 71.85s (0:01:11) ===================================================
+__________________________________________________________________________ summary __________________________________________________________________________
+  py37-default: commands succeeded
+  py37- use_chardet_on_py3: commands succeeded
+  py38-default: commands succeeded
+  py38- use_chardet_on_py3: commands succeeded
+  py39-default: commands succeeded
+  py39- use_chardet_on_py3: commands succeeded
+  py310-default: commands succeeded
+  py310- use_chardet_on_py3: commands succeeded
+  py311-default: commands succeeded
+  py311- use_chardet_on_py3: commands succeeded
+  congratulations :)
