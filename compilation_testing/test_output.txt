@@ -1,4 +1,4 @@
-kobas@DESKTOP-HV826TQ:/mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main$ make test
+Software-quality/compilation_testing/requests-main$ make test
 # This runs all of the tests on all supported Python versions.
 tox
 GLOB sdist-make: /mnt/c/sem6/jo/Proj1/Software-quality/compilation_testing/requests-main/setup.py
