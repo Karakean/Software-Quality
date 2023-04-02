@@ -94,11 +94,19 @@ def test_authentication_with_wrong_credentials():
     assert response.status_code == 401
 
 
+# It's a bug, popitem() should raise KeyError only if cookies are empty, but it is raised even when they're not
+def test_pop_cookie():
+    r = requests.get('https://google.com')
+    init_cookie_count = len(r.cookies)
+    r.cookies.popitem()
+    assert len(r.cookies) == init_cookie_count - 1
+
+
 def main():
     tests = [test_get_request, test_list_get_request, test_post_request, test_put_request, test_delete_request,
              test_head_request, test_patch_request, test_options_request, test_redirection_handling,
              test_cookies_handling, test_authentication_with_correct_credentials,
-             test_authentication_with_wrong_credentials]
+             test_authentication_with_wrong_credentials, test_pop_cookie]
     failed_tests = 0
     for i, test in enumerate(tests):
         try:
