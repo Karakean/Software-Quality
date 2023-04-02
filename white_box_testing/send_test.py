@@ -35,85 +35,107 @@ class SendTest(unittest.TestCase):
         for chunk in data:
             yield chunk
 
-    @timeout(10)
+    @timeout(15)
     def test_invalid_url(self):
         with self.assertRaises(requests.exceptions.InvalidURL):
             requests.get('http://.example.com')
 
-    @timeout(10)
+    @timeout(15)
     def test_not_chunked_data(self):
         requests.put('https://jsonplaceholder.typicode.com/posts/1', data=b'hello world', timeout=5.0)
 
-    @timeout(10)
+    @timeout(15)
     def test_chunked_data(self):
         requests.put('https://jsonplaceholder.typicode.com/posts/1', data=SendTest.data_chunked(), timeout=5.0)
 
-    @timeout(10)
+    @timeout(15)
     def test_tuple_timeout_not_chunked_data(self):
         requests.put('https://jsonplaceholder.typicode.com/posts/1', data=b'hello world', timeout=(5.0, 5.0))
 
-    @timeout(10)
+    @timeout(15)
     def test_tuple_timeout_chunked_data(self):
         requests.put('https://jsonplaceholder.typicode.com/posts/1', data=SendTest.data_chunked(), timeout=(5.0, 5.0))
 
-    @timeout(10)
+    @timeout(15)
     def test_urllib3_timeout_not_chunked_data(self):
         requests.put('https://jsonplaceholder.typicode.com/posts/1', data=b'hello world',
                      timeout=TimeoutSauce(5.0, 5.0))
 
-    @timeout(10)
+    @timeout(15)
     def test_urllib3_timeout_chunked_data(self):
         requests.put('https://jsonplaceholder.typicode.com/posts/1', data=SendTest.data_chunked(),
                      timeout=TimeoutSauce(5.0, 5.0))
 
-    @timeout(10)
+    @timeout(15)
     def test_invalid_timeout_not_chunked_data(self):
         with self.assertRaises(ValueError):
             requests.put('https://jsonplaceholder.typicode.com/posts/1', data=b'hello world', timeout=(5.0, 5.0, 5.0))
 
-    @timeout(10)
+    @timeout(15)
     def test_invalid_timeout_chunked_data(self):
         with self.assertRaises(ValueError):
             requests.put('https://jsonplaceholder.typicode.com/posts/1', data=SendTest.data_chunked(),
                          timeout=(5.0, 5.0, 5.0))
 
-    # @timeout(10)
+    # @timeout(15)
     # def test_https_request_with_http_proxy_not_chunked_data(self):
     #     requests.put("https://www.google.com/", proxies={"http": 'http://localhost:3128'},
     #                  data=b'hello world')
     #
-    # @timeout(10)
+    # @timeout(15)
     # def test_https_request_with_https_proxy_not_chunked_data(self):
     #     requests.put("https://www.google.com/", proxies={"https": 'https://localhost:2137'},
     #                  data=b'hello world')
     #
-    # @timeout(10)
+    # @timeout(15)
     # def test_https_request_with_http_proxy_chunked_data(self):
     #     requests.put("https://www.google.com/", proxies={"http": 'http://localhost:3128'},
     #                  data=SendTest.data_chunked())
     #
-    # @timeout(10)
+    # @timeout(15)
     # def test_https_request_with_https_proxy_chunked_data(self):
     #     requests.put("https://www.google.com/", proxies={"https": 'https://localhost:2137'},
     #                  data=SendTest.data_chunked())
 
-    @timeout(10)
+    @timeout(15)
     def test_connection_error(self):
         with self.assertRaises(requests.exceptions.ConnectionError):
             requests.get("http://0.0.0.0")
 
-    @timeout(10)
+    @timeout(15)
+    def test_max_retries(self):
+        with self.assertRaises(requests.exceptions.ConnectionError):
+            requests.get('http://xxx.yy.com:8080/', timeout=(10.0001, 0.000001))
+
+    @timeout(15)
+    def test_invalid_header(self):
+        invalid_headers = {' invalid key': ' invalid value'}
+        with self.assertRaises(requests.exceptions.InvalidHeader):
+            requests.get('http://www.example.com/', headers=invalid_headers)
+
+    @timeout(15)
+    def test_proxy_error(self):
+        proxies = {
+            'http': 'http://127.0.0.1:8888',
+            'https': 'http://127.0.0.1:8888',
+        }
+        with self.assertRaises(requests.exceptions.ProxyError):
+            requests.get('http://www.example.com/', proxies=proxies)
+
+    @timeout(15)
+    def test_invalid_ssl(self):
+        with self.assertRaises(requests.exceptions.SSLError):
+            requests.get("https://expired.badssl.com")
+
+    @timeout(15)
     def test_timeout_not_chunked_data_non_responding_server(self):
         created_server_url = self.create_non_responding_server()
         with self.assertRaises(requests.exceptions.ReadTimeout):
             requests.put(created_server_url, data=b'hello world', timeout=5.0)
 
     # It's a bug, request's timeout is not working properly with chunked data and non responding server
-    @timeout(10)
+    @timeout(15)
     def test_timeout_chunked_data_non_responding_server(self):
         created_server_url = self.create_non_responding_server()
         with self.assertRaises(requests.exceptions.ReadTimeout):
             requests.put(created_server_url, data=SendTest.data_chunked(), timeout=5.0)
-
-
-

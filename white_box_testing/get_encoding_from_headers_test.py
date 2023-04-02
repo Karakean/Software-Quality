@@ -1,6 +1,7 @@
 from requests.utils import get_encoding_from_headers
 import unittest
 
+
 class TestGetEncodingFromHeaders(unittest.TestCase):
     def test_get_encoding_from_headers_missing_content_type(self):
         headers = {}
