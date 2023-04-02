@@ -1,4 +1,5 @@
 import requests
+import traceback
 
 
 def test_get_request():
@@ -67,7 +68,6 @@ def test_options_request():
 def test_redirection_handling():
     url = "http://httpbin.org/redirect-to?url=https://www.example.com"
     response = requests.get(url)
-    print(response.url)
     assert response.url == "https://www.example.com"
 
 
@@ -95,18 +95,21 @@ def test_authentication_with_wrong_credentials():
 
 
 def main():
-    test_get_request()
-    test_list_get_request()
-    test_post_request()
-    test_put_request()
-    test_delete_request()
-    test_head_request()
-    test_patch_request()
-    test_options_request()
-    test_redirection_handling()
-    test_cookies_handling()
-    test_authentication_with_correct_credentials()
-    test_authentication_with_wrong_credentials()
+    tests = [test_get_request, test_list_get_request, test_post_request, test_put_request, test_delete_request,
+             test_head_request, test_patch_request, test_options_request, test_redirection_handling,
+             test_cookies_handling, test_authentication_with_correct_credentials,
+             test_authentication_with_wrong_credentials]
+    failed_tests = 0
+    for i, test in enumerate(tests):
+        try:
+            test()
+        except Exception:
+            print(f'Test {tests[i]} failed. Caused by:\n{traceback.format_exc()}')
+            failed_tests += 1
+    if failed_tests == 0:
+        print(f'All {len(tests)} tests passed :)')
+    else:
+        print(f'There were failing tests. {len(tests) - failed_tests} tests passed, {failed_tests} failed.')
 
 
 if __name__ == "__main__":
