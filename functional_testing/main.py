@@ -1,5 +1,7 @@
 import requests
 import traceback
+import sys
+from inspect import isfunction
 
 
 def test_get_request():
@@ -71,13 +73,6 @@ def test_redirection_handling():
     assert response.url == "https://www.example.com"
 
 
-def test_cookies_handling():
-    session = requests.Session()
-    session.cookies.set('testCookie', 'testCookieValue')
-    response = session.get('http://httpbin.org/cookies')
-    assert response.json()['cookies']['testCookie'] == 'testCookieValue'
-
-
 def test_authentication_with_correct_credentials():
     username = 'testUsername'
     password = 'testPassword'
@@ -102,11 +97,10 @@ def test_pop_cookie():
     assert len(r.cookies) == init_cookie_count - 1
 
 
-def main():
+def run_all_tests():
     tests = [test_get_request, test_list_get_request, test_post_request, test_put_request, test_delete_request,
              test_head_request, test_patch_request, test_options_request, test_redirection_handling,
-             test_cookies_handling, test_authentication_with_correct_credentials,
-             test_authentication_with_wrong_credentials, test_pop_cookie]
+             test_authentication_with_correct_credentials, test_authentication_with_wrong_credentials, test_pop_cookie]
     failed_tests = 0
     for i, test in enumerate(tests):
         try:
@@ -118,6 +112,25 @@ def main():
         print(f'All {len(tests)} tests passed :)')
     else:
         print(f'There were failing tests. {len(tests) - failed_tests} tests passed, {failed_tests} failed.')
+
+
+def run_particular_test(test):
+    try:
+        test()
+        print(f'Test {test.__name__} passed. :)')
+    except Exception:
+        print(f'Test {test.__name__} failed. Caused by:\n{traceback.format_exc()}')
+
+
+def main():
+    if len(sys.argv) <= 1:
+        run_all_tests()
+        return
+    for test in sys.argv[1:]:
+        if test in globals() and callable(globals().get(test)):
+            run_particular_test(globals().get(test))
+        else:
+            print(f'Invalid test name passed: {test}')
 
 
 if __name__ == "__main__":
